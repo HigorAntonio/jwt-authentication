@@ -1,0 +1,30 @@
+// Authentication
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+  "username": "Higor"
+}
+###
+
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSGlnb3IiLCJpYXQiOjE1NzUwODg1NTF9.Z7mJHuAmbzlCMNIk6n1wTkZ0-bfGq216HOWWkJHEwEI"
+}
+
+###
+
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSGlnb3IiLCJpYXQiOjE1NzUwODg1NTF9.Z7mJHuAmbzlCMNIk6n1wTkZ0-bfGq216HOWWkJHEwEI"
+}
+
+###
+
+// Posts
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSGlnb3IiLCJpYXQiOjE1NzUwODc3NTIsImV4cCI6MTU3NTA4Nzc2N30.fjV6NxXrV8Gn4GnzElhDO5YXO_N0fi0UvkQxocbzYaM
